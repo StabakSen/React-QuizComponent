@@ -5,7 +5,7 @@ class QuizQuestion extends Component {
     
   constructor (props) {
     super(props)
-    this.setState({incorrectAnswer : false})
+    this.state = {incorrectAnswer : false}
   }
 
   render() {
@@ -20,7 +20,7 @@ class QuizQuestion extends Component {
           )}
         </ul>
       </section>
-          
+          {this.state.incorrectAnswer ? <p className='error'>Sorry, that is not right</p> : null}
     </main>
   }
 
